@@ -15,6 +15,7 @@ This was the first project I submitted for my Udacity Front-End Nanodegree progr
   - [ ] e-mail form
   - [ ] sign up for Twitter? (...)
   - [ ] update LinkedIn
+  - [ ] add GitHub link!
 - [ ] Add current career history after featured projects
   - [ ] printable version of resume
     - [ ] redo resume
