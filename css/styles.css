@@ -143,7 +143,7 @@ h2 {
 }
 
 .link-text {
-  padding: 1em 0;
+  margin: 1em 0;
 }
 
 @media screen and (min-width: 800px) {
@@ -163,13 +163,14 @@ h2 {
       text-align: center;
       line-height: 10em; /* to center vertically on top of image */
       color: transparent;
+      margin: 0;
     }
 
   .feature-img:hover span,
   .feature-img:hover img {
     color: rgb(204, 35, 84);
     text-decoration: underline overline rgb(204, 35, 84);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
     font-size: 1.5em;
   }
 }
@@ -187,6 +188,7 @@ h2 {
   padding: 1em;
   border-radius: 5px;
   box-sizing: border-box;
+  min-height: 356px;
 }
 
 .feature-description {
@@ -201,6 +203,11 @@ a {
 
 a:visited {
   color: rgb(208, 123, 126);
+}
+
+a:hover {
+  color: rgb(99, 4, 31);
+  text-decoration: none;
 }
 
 .cat {
