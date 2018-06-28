@@ -234,3 +234,25 @@ a:hover {
     margin: 0 auto;
   }
 }
+
+@media screen and (min-width: 1080px) {
+  main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  .profile {
+    order: 2;
+  }
+
+  .featured {
+    order: 1;
+    width: 100vw;
+  }
+
+  .contact {
+    order: 3;
+    align-self: center;
+  }
+}
