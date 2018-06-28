@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Lato"rel="stylesheet" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Cross-Stitch Pixel Art Maker</h1>
+    <div class="decoration"><i class='fas fa-times'></i><i class='fas fa-times'></i><i class='fas fa-times'></i><i class='fas fa-times'></i><i class='fas fa-times'></i></div>
+    <section>
+      <h2>Design a <span class="strikethrough">Hand-Stitched</span> Digital Masterpiece</h2>
+      <p class="text">Choose the size of your fabric (no bigger than 40x40), choose your colors, and click around to create a work of art!</p>
+      <p class="text">Change the fabric color at any time.</p>
+      <p class="text">To change the color of a stitch, just choose a new thread color and click on the stitch. Click a second time to remove a stitch.</p>
+    </section>
+    <div class="decoration"><i class='fas fa-times'></i><i class='fas fa-times'></i><i class='fas fa-times'></i></div>
+    <section>
+      <h2>Customize Your Project</h2>
+      <form id="sizePicker">
+          <label for="inputHeight">Fabric Height:</label>
+          <input type="number" id="inputHeight" name="height" min="1" max="40" value="15">
+          <label for="inputWidth">Fabric Width:</label>
+          <input type="number" id="inputWeight" name="width" min="1" max="40" value="15">
+          <input type="submit">
+      </form>
+      <section class="colors">
+          <label for="fabricColor" class="colorsChild">Fabric Color</label>
+          <input type="color" value="#ffffff" id="fabricColor">
+          <label for="colorPicker" class="colorsChild">Thread Color</label>
+          <input type="color" id="colorPicker">
+      </section>
+    </section>
+    <section>
+      <h2>Project</h2>
+      <div class="border"><table id="pixelCanvas"></table></div>
+    </section>
+  <script src="js/jquery.js"></script>
+
+</body>
+</html>
