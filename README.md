@@ -10,12 +10,12 @@ This was the first project I submitted for my Udacity Front-End Nanodegree progr
 
 #### Here's what I plan to work on next:
 
-- [ ] Add Google Analytics to the page
+- [x] Add Google Analytics to the page
 - [ ] Add better contact information
   - [ ] e-mail form
   - [ ] sign up for Twitter? (...)
   - [ ] update LinkedIn
-  - [ ] add GitHub link!
+  - [x] add GitHub link!
 - [ ] Add current career history after featured projects
   - [ ] printable version of resume
     - [ ] redo resume
