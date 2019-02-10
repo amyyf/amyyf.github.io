@@ -31,18 +31,15 @@ body {
   padding-right: 2rem;
   font-size: 1.5rem;
   color: rgb(255, 213, 215);
+  margin-left: 1rem;
 }
 
-.logo {
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 600%;
-  width: 100px;
-  text-transform: uppercase;
-  align-self: flex-end;
-  box-sizing: border-box;
-  top: 0;
-  line-height: 0.85em;
-  padding-left: 0.1em;
+.divider {
+  height: 5rem;
+  position: relative;
+  display: inline-block;
+  width: 1rem;
+  margin: 0 1rem;
 }
 
 .name {
