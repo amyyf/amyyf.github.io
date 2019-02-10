@@ -12,6 +12,7 @@ html {
 body {
   margin: 0;
   background-color: rgb(243, 243, 243);
+  max-width: 100vw;
 }
 
 .header-content {
@@ -242,6 +243,8 @@ a:hover {
 @media screen and (min-width: 1200px) {
   .large-container {
     flex-wrap: nowrap;
+    margin: auto;
+    max-width: 1200px;
   }
 
   .featured {
@@ -250,7 +253,7 @@ a:hover {
   }
 
   .profile {
-    flex: 1;
+    flex: 1 1;
     order: 2;
     align-self: flex-start;
     margin: 0 1rem;
