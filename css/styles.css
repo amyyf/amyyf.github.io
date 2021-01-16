@@ -68,7 +68,7 @@ main {
 
 .portrait {
   float: right;
-  max-width: 50vw;
+  max-width: 200px;
   padding-left: 0.5em;
 }
 
