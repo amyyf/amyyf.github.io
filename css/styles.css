@@ -24,7 +24,6 @@ body {
   z-index: 10;
 }
 
-
 .header-text {
   display: flex;
   flex-flow: row wrap;
@@ -64,56 +63,17 @@ main {
   max-width: 665px;
   background-color: white;
   border-radius: 5px;
-  padding: 0.5em;
+  padding: 0.5em 1em;
 }
 
-.about-container {
-  display: flex;
+.portrait {
+  float: right;
+  max-width: 50vw;
+  padding-left: 0.5em;
 }
 
 .about-header {
   margin: 0;
-}
-
-.about {
-  flex: 2 0 66%;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: inline;
-}
-
-li {
-  margin-bottom: 1em;
-}
-
-/*
-forces text to overflow container to visually display as text wrapping
-*/
-.about-2, .about-3 {
-  width: 150%;
-}
-
-@media screen and (min-width: 450px) {
-  .about-2 {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 625px) {
-  .about-3 {
-    width: 100%;
-  }
-
-  .profile {
-    padding: 1em;
-  }
-}
-
-.portrait {
-  flex: 1 0 34%;
-  max-width: 200px;
-  display: inline;
 }
 
 .slideshow {
@@ -261,14 +221,5 @@ a:hover {
 
   .about-container {
     margin-top: 1rem;
-  }
-
-  .about {
-    flex: 2 0;
-  }
-
-  .about-2,
-  .about-3 {
-    width: 200%;
   }
 }
