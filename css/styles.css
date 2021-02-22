@@ -24,19 +24,28 @@ body {
   overflow:hidden;
 }
 
+.text--lg {
+  font-size: 2rem;
+}
+
+.text--ital {
+  font-style: italic;
+}
+
+/**
+Intro section.
+Text appears/disappears centered while scrolling.
+*/
 .intro__wrapper {
   height: 100vh;
+}
+
+.js .intro__wrapper {
+  opacity: 0;
   transition: opacity 0.5s linear;
 }
 
-.js .intro__text {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-}
-
+/* Container for the text. */
 .intro__text {
   align-items: center;
   color: #4a0034;
@@ -46,6 +55,16 @@ body {
   font-weight: 500;
   line-height: 2;
   justify-content: center;
+}
+
+/* Progressive enhancement - full vh for intersection observer if JS is enabled. */
+.js .intro__text {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 0;
 }
 
 @media screen and (min-width: 400px) {
@@ -73,6 +92,10 @@ body {
 
 .intro__text a {
   color: #8a0863;
+}
+
+.intro__text--porfolio-links {
+  flex-direction: column;
 }
 
 .intro__text--waterfall {
@@ -114,8 +137,4 @@ body {
 
 .intro__text--waterfall:nth-child(10) {
   margin-left: 260px;
-}
-
-.intro__text--porfolio-links {
-  flex-direction: column;
 }

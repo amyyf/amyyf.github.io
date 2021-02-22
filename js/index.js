@@ -1,4 +1,4 @@
-// Uses ES5 so polyfills aren't necessary
+// Uses ES5 so polyfills aren't necessary.
 
 function showElement(el) {
   el.style.opacity = '100%';
@@ -21,9 +21,9 @@ function handleIntersect(entries, observer) {
 }
 
 function createObserver(el) {
-  let observer;
+  var observer;
 
-  let options = {
+  var options = {
     rootMargin: '0px',
     threshold: 0.75
   };
@@ -36,19 +36,11 @@ window.addEventListener(
   'load',
   function (event) {
     const ids = ['#intro-one', '#intro-two', '#intro-three', '#intro-four', '#intro-five', '#intro-six', '#intro-seven', '#intro-eight', '#intro-nine'];
-    const els = [];
     ids.forEach(function (id) {
-      els.push(document.querySelector(id));
-    });
-
-    els.forEach(function (el) {
+      var el = document.querySelector(id);
       hideElement(el);
       createObserver(el);
     });
-
-    window.setTimeout(function () {
-      document.querySelector('.intro').classList.add('js');
-    }, 1000);
   },
   false
 );
