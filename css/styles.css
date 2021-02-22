@@ -107,3 +107,7 @@ body {
 .intro__text--waterfall:nth-child(10) {
   margin-left: 260px;
 }
+
+.intro__text--porfolio-links {
+  flex-direction: column;
+}

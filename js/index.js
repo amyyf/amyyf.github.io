@@ -35,7 +35,7 @@ function createObserver(el) {
 window.addEventListener(
   'load',
   function (event) {
-    const ids = ['#intro-one', '#intro-two', '#intro-three', '#intro-four', '#intro-five', '#intro-six', '#intro-seven', '#intro-eight'];
+    const ids = ['#intro-one', '#intro-two', '#intro-three', '#intro-four', '#intro-five', '#intro-six', '#intro-seven', '#intro-eight', '#intro-nine'];
     const els = [];
     ids.forEach(function (id) {
       els.push(document.querySelector(id));
