@@ -45,6 +45,7 @@ window.addEventListener(
       hideElement(el);
       createObserver(el);
     });
+
     window.setTimeout(function () {
       document.querySelector('.intro').classList.add('js');
     }, 1000);
