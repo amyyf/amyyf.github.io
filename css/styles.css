@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: #fff9f7;
+  background-color: lavenderblush;
   margin: 20px;
   max-width: 100vw;
 }
@@ -36,19 +36,25 @@ body {
 Intro section.
 Text appears/disappears centered while scrolling.
 */
+.intro {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
 .intro__wrapper {
   height: 100vh;
+  scroll-snap-align: center;
 }
 
 .js .intro__wrapper {
   opacity: 0;
-  transition: opacity 0.5s linear;
+  transition: opacity 0.4s linear;
 }
 
 /* Container for the text. */
 .intro__text {
   align-items: center;
-  color: #4a0034;
+  color: #901463;
   display: flex;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;

@@ -25,7 +25,7 @@ function createObserver(el) {
 
   var options = {
     rootMargin: '0px',
-    threshold: 0.75
+    threshold: 0.65
   };
 
   observer = new IntersectionObserver(handleIntersect, options);
