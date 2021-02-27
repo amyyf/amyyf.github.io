@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&family=Josefin+Slab:ital,wght@0,500;1,400&display=swap');
+
 img,
 embed,
 object,
@@ -10,7 +12,7 @@ html {
 }
 
 body {
-  background-color: lavenderblush;
+  background-color: #fff9f7;
   margin: 20px;
   max-width: 100vw;
 }
@@ -24,12 +26,16 @@ body {
   overflow:hidden;
 }
 
-.text--lg {
-  font-size: 2rem;
-}
-
 .text--ital {
   font-style: italic;
+}
+
+.text--lg {
+  font-size: 1.3rem;
+}
+
+.text--serif {
+  font-family: 'Josefin Slab', serif;
 }
 
 /**
@@ -56,7 +62,7 @@ Text appears/disappears centered while scrolling.
   align-items: center;
   color: #901463;
   display: flex;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
   line-height: 2;
@@ -77,17 +83,29 @@ Text appears/disappears centered while scrolling.
   .intro__text {
     font-size: 1.3rem;
   }
+
+  .text--lg {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 600px) {
   .intro__text {
     font-size: 1.5rem;
   }
+
+  .text--lg {
+    font-size: 1.7rem;
+  }
 }
 
 @media screen and (min-width: 1080px) {
   .intro__text {
     font-size: 1.8rem;
+  }
+
+  .text--lg {
+    font-size: 2rem;
   }
 }
 
@@ -98,6 +116,12 @@ Text appears/disappears centered while scrolling.
 
 .intro__text a {
   color: #8a0863;
+  font-family: 'Josefin Slab', serif;
+}
+
+.intro__text a:hover,
+.intro__text a:focus {
+  font-style: italic;
 }
 
 .intro__text--porfolio-links {
