@@ -57,6 +57,10 @@ Text appears/disappears centered while scrolling.
   transition: opacity 0.4s linear;
 }
 
+.js .hello {
+  opacity: 1;
+}
+
 /* Container for the text. */
 .intro__text {
   align-items: center;
