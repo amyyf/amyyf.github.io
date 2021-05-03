@@ -57,6 +57,7 @@ Text appears/disappears centered while scrolling.
   transition: opacity 0.4s linear;
 }
 
+/* The initial element should be visible on load so Lighthouse can run. */
 .js .hello {
   opacity: 1;
 }
@@ -171,4 +172,44 @@ Text appears/disappears centered while scrolling.
 
 .intro__text--waterfall:nth-child(10) {
   margin-left: 260px;
+}
+
+/* Scroll icon */
+.scroll-icon {
+  border-right-width: 1px;
+  border-right-color: #901463;
+  border-right-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #901463;
+  border-bottom-style: solid;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 15px;
+}
+
+.scroll-icon--two {
+  margin-top: -10px;
+}
+
+.scroll-wrapper {
+  animation-duration: 0.75s;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: fixed;
+  right: 20px;
+
+  /* Element fades into view on load */
+  opacity: 0;
+  transition: opacity 0.75s linear;
+}
+
+@keyframes bounce {
+  from {
+    bottom: 40px;
+  }
+
+  to {
+    bottom: 35px;
+  }
 }

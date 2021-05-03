@@ -35,12 +35,18 @@ function createObserver(el) {
 window.addEventListener(
   'load',
   function (event) {
+    // Attach intersection observer to all intro text content.
     const ids = ['#intro-one', '#intro-two', '#intro-three', '#intro-four', '#intro-five', '#intro-six', '#intro-seven', '#intro-eight', '#intro-nine'];
     ids.forEach(function (id) {
       var el = document.querySelector(id);
       hideElement(el);
       createObserver(el);
     });
+
+    // Show the scroll element.
+    // TODO: use a timeout for stronger effect. Hide element once we're at the bottom of the page.
+    var scrollEl = document.querySelector('.scroll-wrapper');
+    showElement(scrollEl);
   },
   false
 );
