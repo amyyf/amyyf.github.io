@@ -44,9 +44,16 @@ window.addEventListener(
     });
 
     // Show the scroll element.
-    // TODO: use a timeout for stronger effect. Hide element once we're at the bottom of the page.
-    var scrollEl = document.querySelector('.scroll-wrapper');
-    showElement(scrollEl);
+    window.setTimeout(
+      function() {
+        var scrollEl = document.querySelector('.scroll-wrapper');
+        showElement(scrollEl);
+      },
+      1000
+    );
+
+    // TODO: hide scroll element when we are at the bottom of the page
+    // TODO: enable clicking to scroll snap on scroll element
   },
   false
 );
