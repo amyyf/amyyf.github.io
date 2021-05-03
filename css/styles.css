@@ -183,20 +183,49 @@ Text appears/disappears centered while scrolling.
   border-bottom-color: #901463;
   border-bottom-style: solid;
   transform: rotate(45deg);
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .scroll-icon--two {
-  margin-top: -10px;
+  margin-top: -5px;
+}
+
+@media screen and (min-width: 600px) {
+  .scroll-icon {
+    height: 13px;
+    width: 13px;
+  }
+
+  .scroll-icon--two {
+    margin-top: -7px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .scroll-icon {
+    height: 16px;
+    width: 16px;
+  }
+
+  .scroll-icon--two {
+    margin-top: -9px;
+  }
+}
+
+.scroll-text {
+  color: #8a0863;
+  font-family: 'Josefin Slab', serif;
+  font-size: 0.75rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 .scroll-wrapper {
-  animation-duration: 0.75s;
-  animation-name: bounce;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
   position: fixed;
+  bottom: 40px;
   right: 20px;
 
   /* Element fades into view on load */
@@ -204,12 +233,20 @@ Text appears/disappears centered while scrolling.
   transition: opacity 0.75s linear;
 }
 
+.scroll-icon-wrapper {
+  animation-duration: 0.6s;
+  animation-name: bounce;
+  animation-iteration-count: 6;
+  animation-direction: alternate;
+  position: relative;
+}
+
 @keyframes bounce {
   from {
-    bottom: 40px;
+    bottom: 0;
   }
 
   to {
-    bottom: 35px;
+    bottom: -5px;
   }
 }
