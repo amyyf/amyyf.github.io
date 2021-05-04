@@ -238,7 +238,7 @@ Text appears/disappears centered while scrolling.
   .scroll-icon-wrapper {
     animation-duration: 0.6s;
     animation-name: bounce;
-    animation-iteration-count: 6;
+    animation-iteration-count: 8;
     animation-direction: alternate;
     position: relative;
   }
