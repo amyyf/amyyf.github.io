@@ -233,21 +233,23 @@ Text appears/disappears centered while scrolling.
   transition: opacity 0.75s linear;
 }
 
-/* TODO: use prefers-reduced-motion */
-.scroll-icon-wrapper {
-  animation-duration: 0.6s;
-  animation-name: bounce;
-  animation-iteration-count: 6;
-  animation-direction: alternate;
-  position: relative;
-}
-
-@keyframes bounce {
-  from {
-    bottom: 0;
+/* Only animate when prefers-reduced-motion is not set */
+@media screen and (prefers-reduced-motion: no-preference) {
+  .scroll-icon-wrapper {
+    animation-duration: 0.6s;
+    animation-name: bounce;
+    animation-iteration-count: 6;
+    animation-direction: alternate;
+    position: relative;
   }
 
-  to {
-    bottom: -5px;
+  @keyframes bounce {
+    from {
+      bottom: 0;
+    }
+
+    to {
+      bottom: -5px;
+    }
   }
 }
