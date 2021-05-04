@@ -1,24 +1,35 @@
 // Uses ES5 so polyfills aren't necessary.
 
 // Visually shows the element.
-function showElement(el) {
+// Intro text elements need the inner element's z-index to change.
+// TODO: maybe use toggling and split up opacity and z-index to target separate elements.
+function showElement(el, innerEl) {
   el.style.opacity = '100%';
-  el.style.zIndex = '1';
+  if (innerEl) {
+    innerEl.style.zIndex = '1';
+  } else {
+    el.style.zIndex = '1';
+  }
 }
 
 // Visually hides the element.
-function hideElement(el) {
+function hideElement(el, innerEl) {
   el.style.opacity = '0';
-  el.style.zIndex = '0';
+  if (innerEl) {
+    innerEl.style.zIndex = '0';
+  } else {
+    el.style.zIndex = '0';
+  }
 }
 
 // Handles showing/hiding of intro text elements when they scroll into view.
 function handleIntroIntersect(entries) {
   entries.forEach(function (entry) {
+    const innerEl = entry.target.querySelector('.intro__text')
     if (entry.isIntersecting) {
-      showElement(entry.target);
+      showElement(entry.target, innerEl);
     } else {
-      hideElement(entry.target);
+      hideElement(entry.target, innerEl);
     }
   });
 }
