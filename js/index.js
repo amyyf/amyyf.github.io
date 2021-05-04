@@ -2,12 +2,12 @@
 
 function showElement(el) {
   el.style.opacity = '100%';
-  el.querySelector('.intro__text').style.zIndex = '1';
+  el.style.zIndex = '1';
 }
 
 function hideElement(el) {
   el.style.opacity = '0';
-  el.querySelector('.intro__text').style.zIndex = '0';
+  el.style.zIndex = '0';
 }
 
 function handleIntersect(entries, observer) {
