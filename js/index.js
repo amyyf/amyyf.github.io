@@ -71,7 +71,7 @@ window.addEventListener(
   'load',
   function (event) {
     // Attach intersection observer to all intro text content.
-    const ids = ['#intro-one', '#intro-two', '#intro-three', '#intro-four', '#intro-five', '#intro-six', '#intro-seven', '#intro-eight', '#intro-nine'];
+    const ids = ['#intro-one', '#intro-two', '#intro-three', '#intro-four', '#intro-five', '#intro-six', '#intro-seven', '#intro-eight'];
     ids.forEach(function (id) {
       var el = document.querySelector(id);
       hideElement(el);

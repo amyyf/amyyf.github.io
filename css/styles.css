@@ -170,18 +170,6 @@ Text appears/disappears centered while scrolling.
   margin-left: 170px;
 }
 
-.intro__text--waterfall:nth-child(8) {
-  margin-left: 200px;
-}
-
-.intro__text--waterfall:nth-child(9) {
-  margin-left: 230px;
-}
-
-.intro__text--waterfall:nth-child(10) {
-  margin-left: 260px;
-}
-
 /**
 * Scroll icon.
 */
