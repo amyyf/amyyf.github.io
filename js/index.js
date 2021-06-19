@@ -34,18 +34,37 @@ function handleIntroIntersect(entries) {
   });
 }
 
-// Handle scroll on click.
+// Handle scroll to next element on click.
 function handleScrollClick(e) {
   const ids = ['intro-one', 'intro-two', 'intro-three', 'intro-four', 'intro-five', 'intro-six', 'intro-seven', 'intro-eight'];
-  ids.forEach(function(id) {
-    const el = document.getElementById(id);
-    // If an element is currently visible
+  // Create a new array of the intro elements.
+  const introElements = new Array(ids.length).fill(null).map(function(el, i) {
+    return document.getElementById(ids[i]);
+  })
+  const eventY = e.pageY;
+  let nextEl;
+
+  // First, check if an element is currently visible.
+  introElements.forEach(function(el, i) {
     if ('1' === el.style.opacity) {
-      const index = ids.indexOf(el.id); // current element index
-      const nextEl = document.getElementById(ids[index + 1]); // grab next el by current index + 1
-      nextEl.scrollIntoView();
+      nextEl = introElements[i + 1]; // grab next el by current index + 1
     }
   });
+
+  // If we didn't have a visible element, find the next element that should become visible.
+  if (!nextEl) {
+    let foundNext = false;
+    introElements.forEach(function(el, i) {
+      const elOffsetY = el.offsetTop;
+      if (!foundNext && elOffsetY > eventY) { // the first offset greater than the event click Y will be next el + 1
+        foundNext = true;
+        nextEl = introElements[i - 1]; // the next el will be on the page but hidden, so don't skip it
+      }
+    })
+  }
+
+  // Finally, scroll to the next element!
+  nextEl.scrollIntoView();
 }
 
 // Handles showing/hiding of scroll element,
@@ -97,8 +116,6 @@ window.addEventListener(
     // Attach intersection observer to scroll element.
     const pixelEl = document.querySelector('#bottom-of-page');
     createObserver(pixelEl, handleBottomIntersect);
-
-    // TODO: enable clicking to scroll snap on scroll element
   },
   false
 );
