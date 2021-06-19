@@ -3,12 +3,12 @@
 // Visually shows the element.
 // Intro text elements need the inner element's z-index to change.
 // TODO: maybe use toggling and split up opacity and z-index to target separate elements.
-function showElement(el, innerEl) {
+function showElement(el, innerEl, zIndex = '1') {
   el.style.opacity = '100%';
   if (innerEl) {
-    innerEl.style.zIndex = '1';
+    innerEl.style.zIndex = zIndex;
   } else {
-    el.style.zIndex = '1';
+    el.style.zIndex = zIndex;
   }
 }
 
@@ -34,6 +34,20 @@ function handleIntroIntersect(entries) {
   });
 }
 
+// Handle scroll on click.
+function handleScrollClick(e) {
+  const ids = ['intro-one', 'intro-two', 'intro-three', 'intro-four', 'intro-five', 'intro-six', 'intro-seven', 'intro-eight'];
+  ids.forEach(function(id) {
+    const el = document.getElementById(id);
+    // If an element is currently visible
+    if ('1' === el.style.opacity) {
+      const index = ids.indexOf(el.id); // current element index
+      const nextEl = document.getElementById(ids[index + 1]); // grab next el by current index + 1
+      nextEl.scrollIntoView();
+    }
+  });
+}
+
 // Handles showing/hiding of scroll element,
 // including initial display and hiding when at bottom of page.
 function handleBottomIntersect(entries) {
@@ -41,11 +55,13 @@ function handleBottomIntersect(entries) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
       hideElement(scrollEl);
+      scrollEl.removeEventListener('click', handleScrollClick);
     } else {
       // Using a timeout for a slightly delayed load compared to intro text.
       window.setTimeout(
         function () {
-          showElement(scrollEl);
+          showElement(scrollEl, null, '2');
+          scrollEl.addEventListener('click', handleScrollClick);
         },
         1000
       );

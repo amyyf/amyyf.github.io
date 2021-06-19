@@ -57,7 +57,8 @@ Text appears/disappears centered while scrolling.
 
 .intro__wrapper {
   height: 100vh;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .js .intro__wrapper {
@@ -229,6 +230,11 @@ Text appears/disappears centered while scrolling.
   /* Element fades into view on load */
   opacity: 0;
   transition: opacity 0.75s linear;
+}
+
+.scroll-wrapper:hover,
+.scroll-wrapper:focus {
+  cursor: pointer;
 }
 
 /* Only animate when prefers-reduced-motion is not set */
