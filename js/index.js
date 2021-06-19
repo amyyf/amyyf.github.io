@@ -36,7 +36,7 @@ function handleIntroIntersect(entries) {
 
 // Handle scroll to next element on click.
 function handleScrollClick(e) {
-  const ids = ['intro-one', 'intro-two', 'intro-three', 'intro-four', 'intro-five', 'intro-six', 'intro-seven', 'intro-eight'];
+  const ids = ['intro-one', 'intro-two', 'intro-three', 'intro-four', 'intro-five', 'intro-six', 'intro-seven', 'intro-eight', 'intro-nine'];
   // Create a new array of the intro elements.
   const introElements = new Array(ids.length).fill(null).map(function(el, i) {
     return document.getElementById(ids[i]);
@@ -106,7 +106,7 @@ window.addEventListener(
   'load',
   function (event) {
     // Attach intersection observer to all intro text content.
-    const ids = ['#intro-one', '#intro-two', '#intro-three', '#intro-four', '#intro-five', '#intro-six', '#intro-seven', '#intro-eight'];
+    const ids = ['#intro-one', '#intro-two', '#intro-three', '#intro-four', '#intro-five', '#intro-six', '#intro-seven', '#intro-eight', '#intro-nine'];
     ids.forEach(function (id) {
       var el = document.querySelector(id);
       hideElement(el);

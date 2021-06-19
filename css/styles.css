@@ -18,6 +18,7 @@ body {
   --color--bg: #fff9f7;
   --color--text: #901463;
   --color--link: #8a0863;
+  --color--hover: #5e0644;
   --font-family: 'Josefin Slab', serif;
 
   background-color: var(--color--bg);
@@ -135,6 +136,7 @@ Text appears/disappears centered while scrolling.
 
 .intro__text a:hover,
 .intro__text a:focus {
+  color: var(--color--hover);
   font-style: italic;
 }
 
@@ -226,14 +228,15 @@ Text appears/disappears centered while scrolling.
   position: fixed;
   bottom: 40px;
   right: 20px;
+  padding: 0 5px 10px 5px;
 
   /* Element fades into view on load */
   opacity: 0;
   transition: opacity 0.75s linear;
 }
 
-.scroll-wrapper:hover,
-.scroll-wrapper:focus {
+.scroll-wrapper:hover > * {
+  color: var(--color--hover);
   cursor: pointer;
 }
 
