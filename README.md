@@ -12,3 +12,4 @@ The goal is iteration. It's staying simple for now.
 - 5/3/2021: Lighthouse was unable to run because all content initially had `opacity: 0;`. Changed this so the first element on the page has an initial opacity of `1`. Lighthouse works with high scores! Also updated some semantic HTML.
 - 2/22/2021: Launch redesign v.1.
 - 11/21/2022: Remove Gogle analytics
+- 1/31/2023: Updated copy again.
