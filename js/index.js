@@ -44,8 +44,6 @@ function handleScrollClick(e) {
 		"intro-five",
 		"intro-six",
 		"intro-seven",
-		"intro-eight",
-		"intro-nine",
 	];
 	// Create a new array of the intro elements.
 	const introElements = new Array(ids.length).fill(null).map(function (el, i) {
